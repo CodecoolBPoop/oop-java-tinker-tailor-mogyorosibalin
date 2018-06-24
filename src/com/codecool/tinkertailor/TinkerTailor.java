@@ -30,8 +30,7 @@ public class TinkerTailor {
         int out = 0;
         while (tempPlayers.size() != 0) {
             out = (out + k - 1) % tempPlayers.size();
-            sequence.add(tempPlayers.get(out));
-            tempPlayers.remove(out);
+            sequence.add(tempPlayers.remove(out));
         }
         return sequence;
     }
