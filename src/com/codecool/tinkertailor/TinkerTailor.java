@@ -27,13 +27,11 @@ public class TinkerTailor {
     private ArrayList<Integer> game(int k) {
         ArrayList<Integer> sequence = new ArrayList<>(size());
         ArrayList<Integer> tempPlayers = players;
-        int startIx = 0;
-        int out;
+        int out = 0;
         while (tempPlayers.size() != 0) {
-            out = (startIx + k - 1) % tempPlayers.size();
+            out = (out + k - 1) % tempPlayers.size();
             sequence.add(tempPlayers.get(out));
             tempPlayers.remove(out);
-            startIx = out;
         }
         return sequence;
     }
